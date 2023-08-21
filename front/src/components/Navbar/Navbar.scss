@@ -1,0 +1,19 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 5rem;
+
+    .links {
+        display: flex;
+        gap: 3rem;
+
+        a {
+            color: #FF6060;
+            text-decoration: none;
+            font-size: 1.5rem;
+            font-weight: 500;
+            transition: all 0.3s ease-in-out;
+        }
+
+    }
+}
