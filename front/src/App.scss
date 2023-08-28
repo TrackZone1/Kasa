@@ -1,3 +1,21 @@
+
+
+.appNavbar, .appContent {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.appNavbar {
+  margin-top: 25px; 
+}
+
+.appContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 p {
   margin: 0;
   color: white;

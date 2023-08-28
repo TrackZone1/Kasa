@@ -1,13 +1,30 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./index.scss";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
+import Home from "./pages/Home/Home";
+import FicheLogement from "./pages/FicheLogement/FicheLogement";
+
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <React.StrictMode>
-        <App />
+        <BrowserRouter>
+            <Routes>
+                <Route
+                    path="/"
+                    element={<App component={<Home />} />}
+                    StrictMode
+                />
+                <Route
+                    path="/FicheLogement"
+                    element={<App component={<FicheLogement />} />}
+                    StrictMode
+                />
+            </Routes>
+        </BrowserRouter>
     </React.StrictMode>
 );
 

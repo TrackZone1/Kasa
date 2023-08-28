@@ -2,7 +2,7 @@
     padding: 20px;
     position: relative;
     background: #FF6060;
-    z-index: -2;
+    z-index: 1;
     height: 15em;
     width: 15em;
     border-radius: 10px;
@@ -15,7 +15,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        z-index: -1;
+        z-index: 2;
         border-radius: 10px;
     }
 
@@ -24,6 +24,10 @@
         flex-direction: column;
         justify-content: flex-end;
         height: 100%;
+    }
+
+    p {
+        z-index: 3;
     }
 
 }
