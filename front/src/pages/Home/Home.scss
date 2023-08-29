@@ -30,6 +30,7 @@
     }
 
     .content {
+        margin-bottom: 50px;
         padding: 50px;
         border-radius: 25px;
         background: #F6F6F6;
@@ -37,12 +38,11 @@
         .cards {
             display: flex;
             flex-flow: wrap;
-            gap: 30px;
-            justify-content: space-between;
+            gap: 40px;
         }
 
         .card {
-            //flex-grow: 1;
+            flex-grow: 1;
             flex-basis: 27%;
         }
 

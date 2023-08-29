@@ -1,7 +1,8 @@
 .collapse {
-    width: 40em;
 
     .header {
+        position: relative;
+        top: 5px;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -21,9 +22,8 @@
     }
 
     .content {
-        display: none;
-        padding: 10px;
-        border-radius: 10px 10px 5px 5px;
+        padding: 20px;
+        border-radius: 0 0 5px 5px;
         background: var(--gray, #F6F6F6);  
 
         ul {
@@ -32,9 +32,13 @@
             margin: 0;
 
             li {
-                color:#FF6060;
+                color:#FF6060 !important;
             }
+            
+        }
 
+        p {
+            color:#FF6060 !important;
         }
     }
 

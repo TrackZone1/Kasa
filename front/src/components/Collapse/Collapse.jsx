@@ -3,16 +3,19 @@ import imgArrow from "../../assets/images/arrow.svg";
 
 const Collapse = (props) => {
     function Open() {
-        const content = document.querySelector(".content");
-        const svg = document.querySelector(".header img");
-
-        if (content.style.display === "none") {
-            content.style.display = "flex";
-            svg.style.transform = "rotate(0deg)";
-        } else {
-            content.style.display = "none";
-            svg.style.transform = "rotate(180deg)";
-        }
+        document.querySelectorAll(".content").forEach((content) => {
+            if (content.previousSibling.innerText === props.title) {
+                if (content.style.display === "none") {
+                    content.style.display = "flex";
+                    content.previousSibling.lastChild.style.transform =
+                        "rotate(0deg)";
+                } else {
+                    content.style.display = "none";
+                    content.previousSibling.lastChild.style.transform =
+                        "rotate(180deg)";
+                }
+            }
+        });
     }
 
     return (
@@ -26,9 +29,12 @@ const Collapse = (props) => {
                         width="32px"
                         className="rotate-icon"
                         alt="arrow"
+                        style={{ transform: "rotate(180deg)" }}
                     />
                 </div>
-                <div className="content">{props.children}</div>
+                <div className="content" style={{ display: "none" }}>
+                    {props.children}
+                </div>
             </div>
         </>
     );

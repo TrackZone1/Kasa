@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 import "./Navbar.scss";
 import Logo from "../../assets/images/logo.png";
 
@@ -8,8 +10,8 @@ const Navbar = () => {
                 <img src={Logo} alt="logo" height="50em" />
             </div>
             <div className="links">
-                <a href="#accueil">Accueil</a>
-                <a href="#propos">A Propos</a>
+                <Link to="/">Accueil</Link>
+                <Link to="/propos">À propos</Link>
             </div>
         </div>
     );

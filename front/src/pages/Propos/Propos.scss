@@ -1,0 +1,23 @@
+.propos {
+    .background {
+        img {
+            margin: 38px 0;
+            width: 1240px;
+            height: 223px; 
+            border-radius: 25px; 
+            object-fit: cover;
+            filter: brightness(0.7);
+        }
+    }
+
+    .collapses {
+        margin: 0 0 15px 0;
+        display: flex;
+        flex-direction: column;
+    
+        .collapse {
+            margin: 15px 0;
+        }
+    
+    }
+}
