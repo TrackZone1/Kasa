@@ -26,17 +26,21 @@ const Carrousel = (props) => {
     return (
         <div className="carrousel">
             <img src={allImages[currentImg] ?? allImages[0]} alt="carrousel" />
-            <div className="navigation">
-                <button type="button" id="prevImg" onClick={() => Prev()}>
-                    <img src={imgArrow} alt="arrow" />
-                </button>
-                <button type="button" id="nextImg" onClick={() => Next()}>
-                    <img src={imgArrow} alt="arrow" />
-                </button>
-            </div>
-            <p>
-                {currentImg + 1}/{allImages.length}
-            </p>
+            {allImages.length !== 1 && (
+                <div className="navigation">
+                    <button type="button" id="prevImg" onClick={() => Prev()}>
+                        <img src={imgArrow} alt="arrow" />
+                    </button>
+                    <button type="button" id="nextImg" onClick={() => Next()}>
+                        <img src={imgArrow} alt="arrow" />
+                    </button>
+                </div>
+            )}
+            {allImages.length !== 1 && (
+                <p>
+                    {currentImg + 1}/{allImages.length}
+                </p>
+            )}
         </div>
     );
 };
