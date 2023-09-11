@@ -1,5 +1,5 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import "./FicheLogement.scss";
 import Carrousel from "../../components/Carrousel/Carrousel";
 import Badge from "../../components/Badge/Badge";
@@ -9,6 +9,7 @@ import starIcon from "../../assets/images/star.svg";
 import starActiveIcon from "../../assets/images/starActive.svg";
 
 const FicheLogement = () => {
+    const navigate = useNavigate();
     const { id } = useParams();
 
     const [data, setData] = React.useState([]);
@@ -16,6 +17,11 @@ const FicheLogement = () => {
         fetch("http://localhost:3000/fakeData/logements.json")
             .then((response) => response.json())
             .then((data) => {
+                if (
+                    data.filter((logement) => logement.id === id).length === 0
+                ) {
+                    navigate("/404");
+                }
                 setData(data.filter((logement) => logement.id === id)[0]);
             });
     }, []);

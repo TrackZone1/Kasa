@@ -26,6 +26,8 @@
         padding: 20px;
         border-radius: 0 0 5px 5px;
         background: var(--gray, #F6F6F6);  
+        opacity: 0;
+        animation: appear 1s ease-in-out forwards;
 
         ul {
             list-style: none;
@@ -45,6 +47,13 @@
 
     .rotate-icon {
         transition: transform 0.3s ease;
+    }
+
+    @keyframes appear {
+        to {
+            opacity: 1; /* L'opacité devient 1 pour le contenu */
+            transform: translateY(0); /* Le contenu revient à sa position d'origine */
+        }
     }
 
 }

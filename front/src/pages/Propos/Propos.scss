@@ -1,8 +1,9 @@
 .propos {
+    width: 100%;
     .background {
         img {
             margin: 38px 0;
-            width: 1240px;
+            width: 100%;
             height: 223px; 
             border-radius: 25px; 
             object-fit: cover;
@@ -19,5 +20,14 @@
             margin: 15px 0;
         }
     
+    }
+
+    @media (max-width: 768px) {
+        .background {
+            img {
+                margin: 38px 0 5px 0;
+                height: 150px;
+            }
+        }
     }
 }
