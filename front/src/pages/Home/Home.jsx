@@ -19,7 +19,9 @@ const Home = () => {
             <div className="background">
                 <img src={background} alt="background" />
                 <div className="overlay">
-                    <p>Chez vous, partout et ailleurs</p>
+                    <p>
+                        Chez vous, <br className="split" /> partout et ailleurs
+                    </p>
                 </div>
             </div>
             <div className="content">

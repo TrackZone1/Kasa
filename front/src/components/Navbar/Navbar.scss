@@ -15,7 +15,6 @@
         display: flex;
         align-items: center;
         gap: 3rem;
-
         a {
             color: #FF6060;
             text-decoration: none;
@@ -25,11 +24,19 @@
         }
 
     }
+
+    .active {
+        text-decoration: underline !important;
+    }
+
     @media (max-width: 768px) {
         .links {
             margin-left: 43px;
+            gap: 1.5rem;
             a {
-                font-size: 1rem !important;
+                font-size: 12px !important;
+                text-transform: uppercase;
+                white-space: nowrap;
             }
         }
     }
