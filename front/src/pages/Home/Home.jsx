@@ -7,7 +7,7 @@ import Card from "../../components/Card/Card";
 const Home = () => {
     const [data, setData] = React.useState([]);
     React.useEffect(() => {
-        fetch("http://localhost:3000/fakeData/logements.json")
+        fetch("/fakeData/logements.json")
             .then((response) => response.json())
             .then((data) => {
                 setData(data);
